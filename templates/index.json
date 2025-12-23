@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "test message appeaars here!",
             "heading_size": "h0"
           }
         },
@@ -79,6 +79,6 @@
   },
   "order": [
     "image_banner",
-    "featured_collection",
+    "featured_collection"
   ]
 }

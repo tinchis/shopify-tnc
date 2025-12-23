@@ -78,6 +78,9 @@
           {{ section.settings.title }}
         </h2>
       {%- endif -%}
+      <div class="collection__description body rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <p>Descubre nuestra selección de productos destacados, cuidadosamente elegidos para ti.</p>
+      </div>
       {%- if section.settings.description != blank
         or section.settings.show_description
         and section.settings.collection.description != empty
