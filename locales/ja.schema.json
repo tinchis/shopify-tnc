@@ -911,7 +911,7 @@
           "content": "ユーティリティー"
         },
         "enable_follow_on_shop": {
-          "label": "Shopでフォロー",
+          "label": "Shopでフォローする",
           "info": "Shop Payを有効にする必要があります。[詳しくはこちら](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)"
         }
       }
@@ -3176,7 +3176,7 @@
     "main-login": {
       "name": "ログイン",
       "shop_login_button": {
-        "enable": "[Shopでログイン] を有効にする"
+        "enable": "[Shopにログインする] を有効にする"
       }
     },
     "main-order": {
