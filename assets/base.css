@@ -2810,12 +2810,24 @@ details[open] > .header__submenu {
   text-underline-offset: 0.3rem;
 }
 
+.header__menu-item:hover .header__active-menu-item {
+  text-decoration: none !important;
+}
+
 details[open] > .header__menu-item {
   text-decoration: underline;
 }
 
+details[open] > .header__menu-item .header__active-menu-item {
+  text-decoration: none !important;
+}
+
 details[open]:hover > .header__menu-item {
   text-decoration-thickness: 0.2rem;
+}
+
+details[open]:hover > .header__menu-item .header__active-menu-item {
+  text-decoration: none !important;
 }
 
 details[open] > .header__menu-item .icon-caret {
@@ -2823,14 +2835,7 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-foreground));
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-}
-
-.header__menu-item:hover .header__active-menu-item {
-  text-decoration-thickness: 0.2rem;
+  color: rgba(var(--color-foreground), 0.85);
 }
 
 .header__submenu {

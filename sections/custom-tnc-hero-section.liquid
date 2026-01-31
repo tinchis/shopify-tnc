@@ -1,42 +1,54 @@
-<div class="flex items-center gap-25 w-full px-[15vw]">
-  <div class="flex flex-col py-20">
-    <button class="text-white flex items-center gap-2 w-fit rounded-full bg-[#4B2F84] border border-[#242421] text-[11px] -white px-5 py-1.5">
+<div class="flex items-center gap-25 max-md:max-w-full max-md:px-5 max-w-[70vw] xl:mx-auto max-xl:px-[7vw] max-xl:w-full">
+  <div class="flex flex-col py-20 flex-1">
+    <button class="text-white flex items-center gap-2 w-fit rounded-full bg-[#4B2F84] border border-[#242421] text-[11px] -white px-8 py-2">
       <p class="text-2xl">Bienvenido a nuestra tienda</p>
-      <p class="text-2xl font-semibold">Instagram</p>
-      <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.220011 0.219996C0.360637 0.0795457 0.551261 0.000656128 0.750011 0.000656128C0.948762 0.000656128 1.13939 0.0795457 1.28001 0.219996L4.53001 3.47C4.67046 3.61062 4.74935 3.80125 4.74935 4C4.74935 4.19875 4.67046 4.38937 4.53001 4.53L1.28001 7.78C1.13784 7.91248 0.94979 7.9846 0.755489 7.98117C0.561188 7.97774 0.375803 7.89903 0.23839 7.76162C0.100977 7.62421 0.0222646 7.43882 0.0188364 7.24452C0.0154082 7.05022 0.0875314 6.86217 0.220011 6.72L2.94001 4L0.220011 1.28C0.079561 1.13937 0.000671387 0.948747 0.000671387 0.749996C0.000671387 0.551246 0.079561 0.360622 0.220011 0.219996Z" fill="white"/>
-      </svg>
+      <div class="flex items-center gap-2 max-md:hidden">
+        <p class="text-2xl font-semibold">Instagram</p>
+        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.220011 0.219996C0.360637 0.0795457 0.551261 0.000656128 0.750011 0.000656128C0.948762 0.000656128 1.13939 0.0795457 1.28001 0.219996L4.53001 3.47C4.67046 3.61062 4.74935 3.80125 4.74935 4C4.74935 4.19875 4.67046 4.38937 4.53001 4.53L1.28001 7.78C1.13784 7.91248 0.94979 7.9846 0.755489 7.98117C0.561188 7.97774 0.375803 7.89903 0.23839 7.76162C0.100977 7.62421 0.0222646 7.43882 0.0188364 7.24452C0.0154082 7.05022 0.0875314 6.86217 0.220011 6.72L2.94001 4L0.220011 1.28C0.079561 1.13937 0.000671387 0.948747 0.000671387 0.749996C0.000671387 0.551246 0.079561 0.360622 0.220011 0.219996Z" fill="white"/>
+        </svg>
+      </div>
     </button>
-    <h1 class="font-instrument !text-[80px] tracking-tight text-[#181816]">
+    <h1 class="font-instrument !text-[80px] tracking-tight text-[#181816] max-md:!text-[63px]">
       Cosmética Natural, Ritual y <br class="hidden md:block">
       Regeneración Consciente
     </h1>
-    <p class="text-[#181816] text-[18px]">
-      Somos una marca de cosmética natural creada a partir del poder de las plantas medicinales, la bioestimulación y el
-      cuidado consciente del cuerpo y el cabello.
-    </p>
-    <div class="flex items-center gap-2">
-      <button class="bg-[#E0A358] hover:bg-[#D48B36] transition-colors cursor-pointer  text-[#0C0C09] text-2xl w-fit h-fit px-7 py-3 rounded-2xl font-normal">
-        Ver catálogo
-      </button>
-      <button class="flex items-center gap-2 text-[#181816] hover:bg-black/10 rounded-2xl px-7 py-3 transition-colors cursor-pointer text-2xl">
-        Contacto
-        <span>
-          <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.5049 3.49512H0.504883" stroke="#181816" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9.5 6.5L12.5 3.5L9.5 0.5" stroke="#181816" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      </button>
+    <div class="flex flex-col gap-10">
+      <p class="text-[#181816] text-[20px]">
+        Somos una marca de cosmética natural creada a partir del poder de las plantas medicinales, la bioestimulación y el
+        cuidado consciente del cuerpo y el cabello.
+      </p>
+      <div class="flex items-center gap-2">
+        <button class="bg-[#E0A358] hover:bg-[#D48B36] transition-colors cursor-pointer  text-[#0C0C09] text-2xl w-fit h-fit px-9 py-5 rounded-2xl font-normal">
+          Ver catálogo
+        </button>
+        <button class="flex items-center gap-2 text-[#181816] hover:bg-black/5 rounded-2xl px-9 py-5 transition-colors cursor-pointer text-2xl">
+          Contacto
+          <span>
+            <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5049 3.49512H0.504883" stroke="#181816" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9.5 6.5L12.5 3.5L9.5 0.5" stroke="#181816" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
-  <div>
-    <img
-      src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/heroImage.png?v=1769558678"
-      class="h-auto w-full"
-      alt="Hero Section Image"
-    >
-  </div>
+<div class="flex flex-col gap-5">
+  <img
+    src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/heroImage.png?v=1769558678"
+    class="h-auto max-w-[350px] max-xl:hidden"
+    alt="Hero Section Image"
+  >
+    <div class="flex flex-col bg-[#161616] w-fit h-fit rounded-4xl min-w-[180px] px-8 py-5 leading-13">
+      <p class="text-white text-[27px] font-semibold">
+        +420
+      </p>
+      <p class="text-[#8B8B8B] text-[14px] font-regular">
+        Vendidos
+      </p>
+    </div>
+</div>
 </div>
 
 {% schema %}
