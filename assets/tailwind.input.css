@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@source "../sections/**/*.liquid";
+@source "../snippets/**/*.liquid";
+@source "../layout/*.liquid";
+@source "../templates/**/*.json";
+
 
 @theme {
     --font-instrument: 'Instrument Serif', serif;

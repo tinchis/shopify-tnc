@@ -74,6 +74,35 @@
       padding-top: 0.5rem;
     }
   }
+
+
+
+  .custom-logo-container {
+    display: flex;
+    justify-content: flex-start; /* Align to left */
+    align-items: center;
+    margin-right: 2rem; /* Add spacing between logo and menu */
+  }
+
+  .custom-logo-img {
+    width: 90px; /* Reduced desktop size */
+    height: auto;
+    object-fit: contain;
+    transition: width 0.3s ease;
+  }
+
+  /* Mobile adaptation */
+  @media screen and (max-width: 768px) {
+    .custom-logo-img {
+      width: 60px; /* Reduced mobile size */
+    }
+    /* Ensure it doesn't break layout on very small screens */
+    .custom-logo-container {
+        justify-content: flex-start;
+        width: auto;
+        margin-right: 1rem;
+    }
+  }
 </style>
 
 {%- style -%}
@@ -141,6 +170,21 @@
     style="display: flex; justify-content: space-between; align-items: center;"
   >
     <div style="display: flex; align-items: center; gap: 2rem; width: 100%; justify-content: space-between;">
+      {%- if section.settings.menu != blank -%}
+        {%- render 'header-drawer' -%}
+      {%- endif -%}
+
+      <a href="{{ routes.root_url }}" class="custom-logo-container">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/LOGO_EN_BRONCE.png?v=1770232684"
+          alt="{{ shop.name }}"
+          class="custom-logo-img"
+          loading="lazy"
+          width="90"
+          height="auto"
+        >
+      </a>
+
       {%- liquid
         if section.settings.menu != blank
           if section.settings.menu_type_desktop == 'dropdown'

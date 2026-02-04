@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "*.liquid": "html"
+  },
+  "emmet.includeLanguages": {
+    "liquid": "html"
+  }
+}
