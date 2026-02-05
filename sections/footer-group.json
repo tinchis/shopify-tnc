@@ -14,8 +14,8 @@
     "custom_footer": {
       "type": "custom-tnc-footer",
       "settings": {
-        "bg_color": "#161616",
-        "text_color": "#ffffff"
+        "bg_color": "#FEF3E6",
+        "text_color": "#181A1E"
       }
     }
   },

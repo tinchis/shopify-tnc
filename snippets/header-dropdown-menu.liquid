@@ -82,7 +82,7 @@
         {%- else -%}
           <a
             id="HeaderMenu-{{ link.handle }}"
-            href="{{ link.url }}"
+            href="{% if link.title == 'Contacto' or link.title == 'Contact' %}/pages/contact{% else %}{{ link.url }}{% endif %}"
             class="header__menu-item list-menu__item link link--text focus-inset"
             {% if link.current %}
               aria-current="page"
@@ -99,5 +99,9 @@
         {%- endif -%}
       </li>
     {%- endfor -%}
+    <!-- Hardcoded About Us Link -->
+    <li>
+      <a href="/pages/sobre-nosotros" class="header__menu-item list-menu__item link link--text focus-inset"><span class="header__active-menu-item">Sobre Nosotros</span></a>
+    </li>
   </ul>
 </nav>

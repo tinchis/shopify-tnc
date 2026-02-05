@@ -58,19 +58,22 @@
   endif
 -%}
 
-<div class="flex items-center gap-25 max-md:max-w-full max-md:px-5 max-w-[70vw] xl:mx-auto max-xl:px-[7vw] max-xl:w-full">
+<div class="relative w-full overflow-hidden isolate">
+  <video
+    src="https://cdn.shopify.com/videos/c/o/v/bb47af8f8b704a7fbb55ac6f441ef19d.mp4"
+    class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-40"
+    autoplay
+    muted
+    loop
+    playsinline
+  ></video>
+  <div class="absolute inset-0 z-1 backdrop-blur-xl pointer-events-none" style="mask-image: linear-gradient(to bottom, black 0%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);"></div>
+  <div class="absolute inset-0 z-1 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
+  <div class="relative z-10 flex items-center gap-25 max-md:max-w-full max-md:px-10 max-w-[70vw] xl:mx-auto max-xl:px-[7vw] max-xl:w-full">
   <div class="flex flex-col py-10 flex-1 gap-5">
-    <button class="text-white flex items-center gap-2 w-fit rounded-full bg-[#4B2F84] border border-[#242421] text-[11px] -white px-8 py-2">
-      <p class="text-2xl">Bienvenido/a a nuestra tienda</p>
-      <div class="flex items-center gap-2 max-md:hidden">
-        <p class="text-2xl font-semibold">Instagram</p>
-        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M0.220011 0.219996C0.360637 0.0795457 0.551261 0.000656128 0.750011 0.000656128C0.948762 0.000656128 1.13939 0.0795457 1.28001 0.219996L4.53001 3.47C4.67046 3.61062 4.74935 3.80125 4.74935 4C4.74935 4.19875 4.67046 4.38937 4.53001 4.53L1.28001 7.78C1.13784 7.91248 0.94979 7.9846 0.755489 7.98117C0.561188 7.97774 0.375803 7.89903 0.23839 7.76162C0.100977 7.62421 0.0222646 7.43882 0.0188364 7.24452C0.0154082 7.05022 0.0875314 6.86217 0.220011 6.72L2.94001 4L0.220011 1.28C0.079561 1.13937 0.000671387 0.948747 0.000671387 0.749996C0.000671387 0.551246 0.079561 0.360622 0.220011 0.219996Z" fill="white"/>
-        </svg>
-      </div>
-    </button>
+    
     <div class="flex flex-col gap-5">
-        <h1 class="font-instrument !text-[80px] tracking-tight text-[#181816] max-md:!text-[50px] !leading-[1]">
+        <h1 class="font-instrument !text-[80px] tracking-tight text-[#181816] max-md:!text-[40px] !leading-[1] max-md:backdrop-blur-xs max-md:shadow-xl max-md:bg-white/40 max-md:border max-md:border-white/10 max-md:rounded-2xl max-md:px-8 max-md:py-5">
           Cosmética Natural, Ritual y <br class="hidden md:block">
           Regeneración Consciente
         </h1>
@@ -117,6 +120,7 @@
       </div>
     </div>
   </div>
+
 <div class="relative flex flex-col">
   {% if section.settings.hero_image != blank %}
     {{ section.settings.hero_image | image_tag: 
@@ -157,9 +161,282 @@
   </div>
 </div>
 </div>
+</div>
+
+<!-- Nature Connection Section -->
+<div class="w-full h-auto py-16 bg-white text-[#161616] flex flex-col md:flex-row justify-center items-center md:items-start gap-12 md:gap-24 px-5">
+  <!-- Item 1 -->
+  <div class="flex flex-col items-center text-center gap-2 max-w-[300px]">
+      <div class="flex items-center justify-center w-[104px] h-[104px] bg-[#FFEFD9] rounded-full mb-2">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.21 5.5708L20.0418 2.91675L17.2892 3.31554C6.65353 4.85647 2.98586 13.4755 2.4113 18.1472C1.79198 23.1829 4.84798 27.8876 9.52981 29.2181C9.20867 25.4455 9.29839 21.969 9.65268 18.8502L13.1303 19.2452C12.7825 22.3075 12.7066 25.765 13.0744 29.5494C17.6878 29.1268 21.5012 25.4068 22.0963 20.5682C22.284 19.0423 21.9775 17.6082 21.549 16.3175C21.2481 15.4111 20.8437 14.4622 20.4656 13.5751C20.3234 13.2414 20.1849 12.9165 20.057 12.6059C19.0681 10.2033 18.4369 8.03778 19.21 5.5708Z" fill="#E0A358"/>
+          <path d="M19.4197 40.9258C18.4525 41.9947 17.4994 43.1349 16.5654 44.3476C14.5778 39.0283 13.51 34.0569 13.0718 29.5491C12.3964 29.611 11.7039 29.6021 11.0018 29.5158C10.4949 29.4535 10.0026 29.3531 9.52716 29.218C10.0025 34.8015 11.3778 41.0333 14.1275 47.7136L14.1589 47.7006C13.3871 48.8546 12.6328 50.0628 11.8994 51.3259L14.9263 53.0833C16.8811 49.7163 18.982 46.7773 21.1564 44.2468C20.7364 43.6756 20.3575 43.0521 20.0263 42.3778C19.7935 41.9039 19.5916 41.419 19.4197 40.9258Z" fill="#E0A358"/>
+          <path d="M21.158 44.2483C24.9746 39.8068 29.0176 36.6246 32.8937 34.5985L31.2723 31.4966C27.3173 33.5642 23.2588 36.685 19.4209 40.9275C17.2601 34.7311 19.8367 27.2112 25.477 23.3834C28.1517 21.5682 32.3918 19.7271 37.1784 19.6343C42.0397 19.54 47.3781 21.2569 52.045 26.4267L53.6681 28.2246L51.4512 29.2008C47.9855 30.7271 45.9888 33.6953 44.1054 37.1183C43.8527 37.5775 43.5981 38.0526 43.3403 38.5337C42.6748 39.775 41.9886 41.0553 41.2624 42.2015C40.2376 43.8192 39.0133 45.3769 37.37 46.4922C31.787 50.2811 24.8691 49.295 21.158 44.2483Z" fill="#E0A358"/>
+          </svg>
+      </div>
+      <p class="font-instrument text-[23px] leading-tight">
+        1. Conexión con la naturaleza
+      </p>
+      <p class="text-[13px] text-[#161616]/70">
+        Conexión con la naturaleza · origen botánico · equilibrio
+      </p>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="flex flex-col items-center text-center gap-2 max-w-[300px]">
+      <div class="flex items-center justify-center w-[104px] h-[104px] bg-[#FFEFD9] rounded-full mb-2">
+         <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50.1667 34.2715C47.2201 35.8448 43.8548 36.7366 40.281 36.7366C28.6732 36.7366 19.2633 27.3268 19.2633 15.7189C19.2633 12.1452 20.1552 8.77983 21.7286 5.83325C11.2802 8.28197 3.5 17.6599 3.5 28.8549C3.5 41.9138 14.0862 52.4999 27.1451 52.4999C38.3399 52.4999 47.7178 44.7197 50.1667 34.2715Z" fill="#E0A358"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M47.8333 28C47.8333 17.0464 38.9536 8.16667 28 8.16667V3.5C41.531 3.5 52.5 14.469 52.5 28H47.8333Z" fill="#E0A358"/>
+        </svg>
+      </div>
+      <p class="font-instrument text-[23px] leading-tight">
+        2. Rituales de día y noche
+      </p>
+      <p class="text-[13px] text-[#161616]/70">
+        Rituales de día y noche · balance · ciclos naturales
+      </p>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="flex flex-col items-center text-center gap-2 max-w-[300px]">
+      <div class="flex items-center justify-center w-[104px] h-[104px] bg-[#FFEFD9] rounded-full mb-2">
+          <svg width="45" height="52" viewBox="0 0 45 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.032 0.501168C22.7249 0.274727 22.4839 0.0969567 22.3542 0C22.2244 0.0969567 21.9834 0.274727 21.6763 0.501168C20.6137 1.28465 18.7606 2.65091 17.9976 3.26958C16.0334 4.86231 13.4084 7.13523 10.7769 9.8505C8.15091 12.56 5.48061 15.7486 3.45803 19.1762C1.44251 22.5917 0 26.3632 0 30.2045C0 40.918 8.47631 51.9583 22.3542 51.9583C36.2321 51.9583 44.7083 40.918 44.7083 30.2045C44.7083 26.3632 43.2658 22.5917 41.2503 19.1762C39.2278 15.7486 36.5574 12.56 33.9315 9.8505C31.2999 7.13521 28.675 4.86231 26.7107 3.26958C25.9478 2.65091 24.0947 1.28465 23.032 0.501168ZM29.6042 30.8125C29.6042 34.8167 26.3583 38.0625 22.3542 38.0625V42.8958C29.0276 42.8958 34.4375 37.4859 34.4375 30.8125H29.6042Z" fill="#E0A358"/>
+        </svg>
+      </div>
+      <p class="font-instrument text-[23px] leading-tight">
+        3. Nutrición y regeneración
+      </p>
+      <p class="text-[13px] text-[#161616]/70">
+        Nutrición profunda · regeneración · cuidado desde la raíz
+      </p>
+  </div>
+</div>
+
+<!-- Products Section (Moved up) -->
+<div class="flex flex-col gap-4 bg-[#E0A358] w-full py-20 mt-20 items-center text-center">
+  <div class="flex flex-col gap-8 2xl:max-w-[55vw] max-w-[80vw] items-center w-full justify-center">
+    <h1 class="font-instrument !text-[80px] tracking-tight !text-[#181A1E] max-md:!text-[43px] !leading-[1]">
+      Productos Naturales para el Cuidado de la Piel y el Cabello
+    </h1> 
+    <p class="text-[#181A1E] text-3xl w-full font-[300] text-center">
+      Descubre una selección de nuestros productos más elegidos: skincare botánico, tratamientos capilares naturales y fórmulas elaboradas con plantas medicinales y procesos conscientes.
+    </p>
+    <a href="{{ section.settings.collection.url }}" class="bg-[#181A1E] !cursor-pointer hover:!bg-[#2a2d33] transition-colors text-white text-2xl w-fit h-fit px-10 py-5 !rounded-[16px] font-medium no-underline inline-block">
+      Ver catálogo
+    </a>
+  </div>
+<div class="w-full px-5 md:px-20">
+  <div
+    class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding collection--full-width"
+    id="collection-{{ section.id }}"
+    data-id="{{ section.id }}"
+  >
+    <!-- Removed page-width from title wrapper -->
+    <!-- Title & Description removed as requested -->
+
+    <slider-component class="slider-mobile-gutter slider-component-full-width {% if show_mobile_slider == false %} {% endif %}{% if show_desktop_slider == false %} {% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <ul
+        id="Slider-{{ section.id }}"
+        data-id="{{ section.id }}"
+        class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
+        role="list"
+        aria-label="{{ 'general.slider.name' | t }}"
+      >
+        {% assign skip_card_product_styles = false %}
+
+        {%- if section.settings.collection.products.size > 0 -%}
+          {% paginate section.settings.collection.products by section.settings.products_to_show %}
+            {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+              <li
+                id="Slide-{{ section.id }}-{{ forloop.index }}"
+                class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  image_shape: section.settings.image_shape,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  skip_styles: skip_card_product_styles,
+                  section_id: section.id,
+                  quick_add: section.settings.quick_add
+                %}
+              </li>
+              {%- assign skip_card_product_styles = true -%}
+            {%- endfor -%}
+          {% endpaginate %}
+        {%- else -%}
+          {%- for i in (1..section.settings.columns_desktop) -%}
+            <li
+              class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              {% if settings.animations_reveal_on_scroll %}
+                data-cascade
+                style="--animation-order: {{ forloop.index }};"
+              {% endif %}
+            >
+              {% liquid
+                assign ridx = forloop.rindex
+                case ridx
+                  when 5
+                    assign ridx = 1
+                  when 6
+                    assign ridx = 2
+                endcase
+              %}
+              {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
+              {% render 'card-product',
+                show_vendor: section.settings.show_vendor,
+                media_aspect_ratio: section.settings.image_ratio,
+                image_shape: section.settings.image_shape,
+                placeholder_image: placeholder_image
+              %}
+            </li>
+          {%- endfor -%}
+        {%- endif -%}
+      </ul>
+      {%- if show_mobile_slider or show_desktop_slider -%}
+        <div class="slider-buttons">
+          <button
+            type="button"
+            class="slider-button slider-button--prev"
+            name="previous"
+            aria-label="{{ 'general.slider.previous_slide' | t }}"
+            aria-controls="Slider-{{ section.id }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </button>
+          <div class="slider-counter caption">
+            <span class="slider-counter--current">1</span>
+            <span aria-hidden="true"> / </span>
+            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+            <span class="slider-counter--total">{{ products_to_display }}</span>
+          </div>
+          <button
+            type="button"
+            class="slider-button slider-button--next"
+            name="next"
+            aria-label="{{ 'general.slider.next_slide' | t }}"
+            aria-controls="Slider-{{ section.id }}"
+          >
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </button>
+        </div>
+      {%- endif -%}
+    </slider-component>
+
+    {%- if section.settings.show_view_all and more_in_collection -%}
+      <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        <a
+          href="{{ section.settings.collection.url }}"
+          class="bg-[#181A1E] !cursor-pointer hover:!bg-[#2a2d33] transition-colors text-white text-2xl w-fit h-fit px-10 py-5 !rounded-[16px] font-medium no-underline inline-block"
+          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
+        >
+          {{ 'sections.featured_collection.view_all' | t }}
+        </a>
+      </div>
+    {%- endif -%}
+    {% if section.settings.image_shape == 'arch' %}
+      {{ 'mask-arch.svg' | inline_asset_content }}
+    {%- endif -%}
+  </div>
+</div>
+</div>
+
+<!-- Testimonials -->
+<div class="flex flex-col items-center justify-center w-full text-center mt-20 mb-10 px-5">
+  <h2 class="font-instrument !text-[40px] md:!text-[80px] tracking-tight text-[#181A1E] !leading-[1]">
+    Estos son algunos de nuestros testimonios
+  </h2>
+</div>
+
+<div class="flex max-xl:flex-col max-xl:h-fit max-xl:mx-0 max-xl:px-3 items-start gap-4 w-full xl:max-w-[70vw] h-auto mx-auto mt-10">
+  <!-- Testimonial 1 -->
+  <div class="flex flex-col gap-6 bg-gradient-to-b from-[#f9d8ae]/60 to-[#f9d8ae]/20 backdrop-blur-md border border-white/30 shadow-lg w-full h-full px-8 py-8 justify-between rounded-2xl hover:shadow-xl transition-all duration-300">
+    <img 
+      src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/WhatsApp_Image_2026-02-04_at_8.52.36_PM.jpg?v=1770249419" 
+      class="w-full h-[450px] max-md:h-auto object-cover rounded-lg" 
+      alt="Testimonial 1 Image"
+      loading="lazy"
+    >
+    <p class="text-[#161616] text-2xl font-regular">
+    Hoy ni siquiera me puse la crema y mira mis manos… ¡están suaves, hidratadas y sin una sola grieta! No me acuerdo cómo estaban antes, de verdad.
+    Esto es otro nivel, nunca pensé que un producto natural pudiera dejar la piel así de bella todo el día.
+  </p>
+  <div class="flex items-center gap-4">
+    <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/pfp4.png?v=1770066863" class="w-[40px] h-auto rounded-full" alt="">
+    <div class="flex flex-col">
+      <p class="text-[#161616] text-xl font-semibold">
+        Deisly
+    </p>
+    <p class="text-xl text-[#161616]/70 font-regular">
+      Clienta de Lindo Despertar
+    </p>
+    </div>
+  </div>
+  </div>
+  <!-- Testimonial 2 -->
+  <div class="flex flex-col gap-6 bg-gradient-to-b from-[#f9d8ae]/60 to-[#f9d8ae]/20 backdrop-blur-md border border-white/30 shadow-lg w-full h-full px-8 py-8 justify-between rounded-2xl hover:shadow-xl transition-all duration-300">
+    <img 
+      src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/WhatsApp_Image_2026-02-04_at_8.53.08_PM.jpg?v=1770249419" 
+      class="w-full h-[450px] max-md:h-auto object-cover rounded-lg" 
+      alt="Testimonial 2 Image"
+      loading="lazy"
+    >
+    <p class="text-[#161616] text-2xl font-regular">
+      ¡Te dejo mi avance de antes y después! Mira la diferencia...
+      Te envie el audio con el detalle, pero en resumen: muchas gracias por estos productos tan maravillosos y sanadores. De verdad me han ayudado muchísimo en mi piel y en mi día a día.
+  </p>
+  <div class="flex items-center gap-4">
+    <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/pfp1.png?v=1770066921" class="w-[40px] h-auto rounded-full" alt="">
+    <div class="flex flex-col">
+      <p class="text-[#161616] text-xl font-semibold">
+        Nombre de la persona aquí
+    </p>
+    <p class="text-xl text-[#161616]/70 font-regular">
+      Clienta de Lindo Despertar
+    </p>
+    </div>
+  </div>
+  </div>
+  <!-- Testimonial 3 -->
+  <div class="flex flex-col gap-6 bg-gradient-to-b from-[#f9d8ae]/60 to-[#f9d8ae]/20 backdrop-blur-md border border-white/30 shadow-lg w-full h-full px-8 py-8 justify-between rounded-2xl hover:shadow-xl transition-all duration-300">
+    <video 
+      src="https://cdn.shopify.com/videos/c/o/v/21e6ce0dd1ad4a5394d8082309178235.mp4#t=0.5" 
+      class="w-full h-[450px] max-md:h-auto object-cover rounded-lg" 
+      controls 
+      playsinline
+      preload="metadata">
+    </video>
+    <p class="text-[#161616] text-2xl font-regular">
+      Nunca había visto un producto natural que me hiciera este efecto tan rápido y real. Estoy super contenta y feliz, de verdad siento que mi piel y mi cabello están despertando de una forma que no esperaba.
+    </p>
+    <div class="flex items-center gap-4">
+      <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/pfp3.png?v=1770066275" class="w-[40px] h-auto rounded-full" alt="">
+      <div class="flex flex-col">
+        <p class="text-[#161616] text-xl font-semibold">
+          Nombre de la persona aquí
+        </p>
+        <p class="text-xl text-[#161616]/70 font-regular">
+          Clienta de Lindo Despertar
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Carousel Section -->
-<div class="w-full mb-16 px-5 md:px-20 py-10" id="carousel-{{ section.id }}">
+<div class="w-full mb-10 px-5 md:px-20 py-20" id="carousel-{{ section.id }}">
   <div class="relative w-full h-[400px] md:h-[600px] rounded-[30px] overflow-hidden group">
     <div class="flex transition-transform duration-700 ease-out h-full" id="carousel-track-{{ section.id }}">
       <!-- Slide 1 -->
@@ -291,207 +568,12 @@
   </script>
 </div>
 
-<!-- Testimonials -->
-<div class="flex max-xl:flex-col max-xl:h-fit max-xl:mx-0 max-xl:px-3 items-center gap-2 w-full xl:max-w-[70vw] h-[240px] mx-auto mt-5">
-  <!-- Testimonial 1 -->
-  <div class="flex flex-col gap-6 bg-[#161616] w-full h-full px-9 py-6 justify-center rounded-xl">
-    <p class="text-white text-2xl font-regular">
-    Hoy ni me puse la crema y mirá mis manos… ¡están suaves, hidratadas y sin una sola grieta! Ni me acuerdo cómo estaban antes, de verdad.
-    Esto es otro nivel, nunca pensé que un producto natural pudiera dejar la piel así de linda todo el día.
-  </p>
-  <div class="flex items-center gap-4">
-    <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/pfp4.png?v=1770066863" class="w-[40px] h-auto rounded-full" alt="">
-    <div class="flex flex-col">
-      <p class="text-white text-xl font-semibold">
-        Deisly
-    </p>
-    <p class="text-xl text-[#ABAB9C] font-regular">
-      Clienta de Lindo Despertar
-    </p>
-    </div>
-  </div>
-  </div>
-  <!-- Testimonial 2 -->
-  <div class="flex flex-col gap-6 bg-[#161616] w-full h-full px-9 py-6 justify-center rounded-xl">
-    <p class="text-white text-2xl font-regular">
-      ¡Te dejo mi avance de antes y después! Mirá la diferencia...
-Ahí está el audio con el detalle, pero en resumen: muchas gracias por estos productos tan maravillosos y sanadores. De verdad me han ayudado muchísimo en mi piel y en mi día a día.
-  </p>
-  <div class="flex items-center gap-4">
-    <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/pfp1.png?v=1770066921" class="w-[40px] h-auto rounded-full" alt="">
-    <div class="flex flex-col">
-      <p class="text-white text-xl font-semibold">
-        Nombre de la persona aquí
-    </p>
-    <p class="text-xl text-[#ABAB9C] font-regular">
-      Clienta de Lindo Despertar
-    </p>
-    </div>
-  </div>
-  </div>
-  <!-- Testimonial 3 -->
-  <div class="flex flex-col gap-6 bg-[#161616] w-full h-full px-9 py-6 justify-center rounded-xl">
-    <p class="text-white text-2xl font-regular">
-      Nunca había visto un producto natural que me hiciera este efecto tan rápido y real. Estoy super contenta y feliz, de verdad siento que mi piel y mi cabello están despertando de una forma que no esperaba. ¡Gracias por esto!
-    </p>
-    <div class="flex items-center gap-4">
-      <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/pfp3.png?v=1770066275" class="w-[40px] h-auto rounded-full" alt="">
-      <div class="flex flex-col">
-        <p class="text-white text-xl font-semibold">
-          Nombre de la persona aquí
-        </p>
-        <p class="text-xl text-[#ABAB9C] font-regular">
-          Clienta de Lindo Despertar
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="flex flex-col md:flex-row w-full gap-4 px-5 md:px-20 mt-10 h-auto md:h-[600px]"> 
+<div class="flex flex-col md:flex-row w-full gap-4 px-5 md:px-20 mt-20 h-auto md:h-[600px]"> 
     <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/IMG-9399.jpg?v=1769886288" alt="Featured Image 1" class="w-full md:w-1/2 h-[400px] md:h-full object-cover rounded-[20px]">
     <div class="flex flex-col w-full md:w-1/2 gap-4 h-[500px] md:h-full">
           <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/IMG-9404.jpg?v=1769889166" alt="Featured Image 2" class="w-full h-1/2 object-cover rounded-[20px]">
           <img src="https://cdn.shopify.com/s/files/1/0744/6095/4837/files/IMG-9391.jpg?v=1769878289" alt="Featured Image 3" class="w-full h-1/2 object-cover object-[center_70%] rounded-[20px]">
     </div>
-</div>
-
-<div class="flex flex-col gap-4 bg-[#181A1E] w-full py-20 mt-15 items-center text-center">
-  <div class="flex flex-col gap-8 2xl:max-w-[55vw] max-w-[80vw] items-center w-full justify-center">
-    <h1 class="font-instrument !text-[80px] tracking-tight !text-white max-md:!text-[43px] !leading-[1]">
-      Productos Naturales para el Cuidado de la Piel y el Cabello
-    </h1> 
-    <p class="text-[#ADADAD] text-3xl w-full font-[300] text-center">
-      Descubre una selección de nuestros productos más elegidos: skincare botánico, tratamientos capilares naturales y fórmulas elaboradas con plantas medicinales y procesos conscientes.
-    </p>
-    <a href="{{ section.settings.collection.url }}" class="bg-[#E0A358] !cursor-pointer hover:!bg-[#D48B36] transition-colors text-[#0C0C09] text-2xl w-fit h-fit px-10 py-5 !rounded-[16px] font-medium no-underline inline-block">
-      Ver catálogo
-    </a>
-  </div>
-<div class="w-full px-5 md:px-20">
-  <div
-    class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding collection--full-width"
-    id="collection-{{ section.id }}"
-    data-id="{{ section.id }}"
-  >
-    <!-- Removed page-width from title wrapper -->
-    <!-- Title & Description removed as requested -->
-
-    <slider-component class="slider-mobile-gutter slider-component-full-width {% if show_mobile_slider == false %} {% endif %}{% if show_desktop_slider == false %} {% endif %}{% if show_desktop_slider %} slider-component-desktop{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-      <ul
-        id="Slider-{{ section.id }}"
-        data-id="{{ section.id }}"
-        class="grid product-grid contains-card contains-card--product{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
-        role="list"
-        aria-label="{{ 'general.slider.name' | t }}"
-      >
-        {% assign skip_card_product_styles = false %}
-
-        {%- if section.settings.collection.products.size > 0 -%}
-          {% paginate section.settings.collection.products by section.settings.products_to_show %}
-            {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-              <li
-                id="Slide-{{ section.id }}-{{ forloop.index }}"
-                class="grid__item{% if show_mobile_slider or show_desktop_slider %} slider__slide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                {% render 'card-product',
-                  card_product: product,
-                  media_aspect_ratio: section.settings.image_ratio,
-                  image_shape: section.settings.image_shape,
-                  show_secondary_image: section.settings.show_secondary_image,
-                  show_vendor: section.settings.show_vendor,
-                  show_rating: section.settings.show_rating,
-                  skip_styles: skip_card_product_styles,
-                  section_id: section.id,
-                  quick_add: section.settings.quick_add
-                %}
-              </li>
-              {%- assign skip_card_product_styles = true -%}
-            {%- endfor -%}
-          {% endpaginate %}
-        {%- else -%}
-          {%- for i in (1..section.settings.columns_desktop) -%}
-            <li
-              class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-              {% if settings.animations_reveal_on_scroll %}
-                data-cascade
-                style="--animation-order: {{ forloop.index }};"
-              {% endif %}
-            >
-              {% liquid
-                assign ridx = forloop.rindex
-                case ridx
-                  when 5
-                    assign ridx = 1
-                  when 6
-                    assign ridx = 2
-                endcase
-              %}
-              {%- assign placeholder_image = 'product-apparel-' | append: ridx -%}
-              {% render 'card-product',
-                show_vendor: section.settings.show_vendor,
-                media_aspect_ratio: section.settings.image_ratio,
-                image_shape: section.settings.image_shape,
-                placeholder_image: placeholder_image
-              %}
-            </li>
-          {%- endfor -%}
-        {%- endif -%}
-      </ul>
-      {%- if show_mobile_slider or show_desktop_slider -%}
-        <div class="slider-buttons">
-          <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-            aria-controls="Slider-{{ section.id }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ products_to_display }}</span>
-          </div>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-            aria-controls="Slider-{{ section.id }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </button>
-        </div>
-      {%- endif -%}
-    </slider-component>
-
-    {%- if section.settings.show_view_all and more_in_collection -%}
-      <div class="center collection__view-all{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-        <a
-          href="{{ section.settings.collection.url }}"
-          class="bg-[#E0A358] !cursor-pointer hover:!bg-[#D48B36] transition-colors text-[#0C0C09] text-2xl w-fit h-fit px-10 py-5 !rounded-[16px] font-medium no-underline inline-block"
-          aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title | escape }}"
-        >
-          {{ 'sections.featured_collection.view_all' | t }}
-        </a>
-      </div>
-    {%- endif -%}
-    {% if section.settings.image_shape == 'arch' %}
-      {{ 'mask-arch.svg' | inline_asset_content }}
-    {%- endif -%}
-  </div>
-</div>
 </div>
 
 {% schema %}
